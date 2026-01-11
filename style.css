@@ -32,3 +32,20 @@ body {
 .model {
     grid-column: 2/3;
 }
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+    padding: 24px;
+  }
+
+  .model {
+    grid-column: 1 / -1;
+    order: 2;
+  }
+}
+
