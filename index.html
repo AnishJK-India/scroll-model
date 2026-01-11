@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="scroll-model.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Scroll-model.js</title>
+</head>
+<body>
+    <section class="hero">
+        <h1>scroll-model.js</h1>
+        <p>A library made to make award winning 3d scroll animation without the need of writing Javascript or CSS</p><br>
+        <div class="code-container">
+            <pre><code>
+&lt;--import the component--&gt;
+
+&lt;script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">&lt;/script&gt;
+&lt;script type="module" src="scroll-model.js">&lt;/script&gt;
+
+&lt;--use it like any tag--&gt;
+
+&lt;scroll-model 
+    src="fallout_car.glb"
+    camera-controls
+    rotation-frames="0:0,0,0;
+                    1:360,360,360"&gt;
+&lt;/scroll-model&gt;
+            </code></pre>
+        </div>
+        <div class="docs">
+            <h1>Documentation</h1>
+            <h2>How to use</h2>
+            <p>first import the libraries</p>
+            <pre><code>
+&lt;script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">&lt;/script&gt;
+&lt;script type="module" src="scroll-model.js">&lt;/script&gt;
+            </code></pre>
+            <p>then use it just like model-viewer by google but just add "-frames" after the attributes to make it run using keyframes</p>
+            <pre><code>
+&lt;scroll-model 
+src="fallout_car.glb"
+camera-controls
+rotation-frames="0:0,0,0;
+                1:0,0,360"&gt;
+&lt;/scroll-model&gt;
+            </code></pre>
+            <p>here 0 means 0% page scrolled and 1 means 100% page scrolled</p>
+            <h2>Attributes</h2>
+            <ul>
+                <li><strong>src</strong>: the source of the 3d model</li>
+                <li><strong>camera-controls</strong>: to enable camera controls</li>
+                <li><strong>rotation-frames</strong>: keyframes for rotation in the format "keyframe:value,value,value;"</li>
+                <li><strong>position-frames</strong>: keyframes for position in the format "keyframe:value,value,value;"</li>
+                <li><strong>scale-frames</strong>: keyframes for scale in the format "keyframe:value,value,value;"</li>
+            </ul>
+        </div>
+    </section>
+    <section class="model">
+        <scroll-model
+            src="fallout_car.glb"
+            rotation-frames="0:0,0,0;
+                            1:0,0,360">
+        </scroll-model>
+    </section>
+</body>
+</html>
